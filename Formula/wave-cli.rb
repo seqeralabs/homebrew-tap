@@ -1,39 +1,39 @@
-# Generated with JReleaser 1.12.0 at 2024-05-17T11:52:56.483521267Z
+# Generated with JReleaser 1.12.0 at 2024-05-28T14:13:50.588916204Z
 
 class WaveCli < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
-  version "1.4.0"
+  version "1.4.1"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.0/wave-1.4.0-linux-x86_64", :using => :nounzip
-    sha256 "1e09b038b49fcec2bf91b1b393ecab1a5904e3dc34c8af0fc768cb15d1a845f0"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.1/wave-1.4.1-linux-x86_64", :using => :nounzip
+    sha256 "194ce74c11201c5c3347f7f242c830a2c8105b2d5b83297ebadcc544b2dacb32"
 
     def install
-      bin.install "wave-1.4.0-linux-x86_64" => "wave"
+      bin.install "wave-1.4.1-linux-x86_64" => "wave"
     end
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.0/wave-1.4.0-macos-arm64", :using => :nounzip
-    sha256 "2516b504ca024724b53bfa24f3544c68029a0da9d448997d63cd735aa17b870c"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.1/wave-1.4.1-macos-arm64", :using => :nounzip
+    sha256 "497e48adf7c9fe625bf9d6e869db4a0f9f34bbdc4b94da738c432bb266374413"
 
     def install
-      bin.install "wave-1.4.0-macos-arm64" => "wave"
+      bin.install "wave-1.4.1-macos-arm64" => "wave"
     end
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.0/wave-1.4.0-macos-x86_64", :using => :nounzip
-    sha256 "936f7e83f3b6e7f61bd9915bbafd98ad4ce76221255835f0ec761d2340dafca6"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.1/wave-1.4.1-macos-x86_64", :using => :nounzip
+    sha256 "b4e1b7f791fe33ff5d63a5e43917197eaa3b530a7a10b15e5d701d3b896cff61"
 
     def install
-      bin.install "wave-1.4.0-macos-x86_64" => "wave"
+      bin.install "wave-1.4.1-macos-x86_64" => "wave"
     end
   end
 
 
   test do
     output = shell_output("#{bin}/wave --version")
-    assert_match "1.4.0", output
+    assert_match "1.4.1", output
   end
 end
