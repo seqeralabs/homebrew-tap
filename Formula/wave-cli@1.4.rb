@@ -1,6 +1,6 @@
-# Generated with JReleaser 1.12.0 at 2024-05-28T14:13:50.588916204Z
+# Generated with JReleaser 1.14.0 at 2024-10-12T14:29:20.714409898Z
 
-class WaveCli < Formula
+class WaveCliAT14 < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
   version "1.4.1"

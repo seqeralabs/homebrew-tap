@@ -1,7 +1,7 @@
 
 # Generated with JReleaser 1.12.0 at 2024-05-28T14:13:50.588916204Z
 
-class WaveCliJar < Formula
+class WaveCliJarAT4 < Formula
     desc "Wave CLI"
     homepage "https://github.com/seqeralabs/wave-cli"
     url "https://github.com/seqeralabs/wave-cli/releases/download/v1.4.1/wave-1.4.1.jar", :using => :nounzip
