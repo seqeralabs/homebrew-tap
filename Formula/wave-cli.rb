@@ -1,39 +1,39 @@
-# Generated with JReleaser 1.14.0 at 2024-10-12T14:29:20.714409898Z
+# Generated with JReleaser 1.14.0 at 2024-10-10T09:58:38.739036151Z
 
 class WaveCli < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
-  version "1.5.0-rc.3"
+  version "1.5.0-rc.2"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.5.0-rc.3/wave-1.5.0-rc.3-linux-x86_64", :using => :nounzip
-    sha256 "dd8b7d2a3a48d7cae60c3ee56a3ee6e76b3893a30cace93cf495df4ba5a3a538"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.5.0-rc.2/wave-1.5.0-rc.2-linux-x86_64", :using => :nounzip
+    sha256 "41b26c3c84ef0dcbd66e9584c41d3622682556d3dff4da3fd4011ccc196f2ffd"
 
     def install
-      bin.install "wave-1.5.0-rc.3-linux-x86_64" => "wave"
+      bin.install "wave-1.5.0-rc.2-linux-x86_64" => "wave"
     end
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.5.0-rc.3/wave-1.5.0-rc.3-macos-arm64", :using => :nounzip
-    sha256 "f967d7d7e7c3cbda0580cf1739e9ee290f66c5f2eb40ce98c2e2804d858fc0e3"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.5.0-rc.2/wave-1.5.0-rc.2-macos-arm64", :using => :nounzip
+    sha256 "8582ab55fd6861f7f2588102b23cd413e69c59038f5c196efcf9c65ddaef0ff7"
 
     def install
-      bin.install "wave-1.5.0-rc.3-macos-arm64" => "wave"
+      bin.install "wave-1.5.0-rc.2-macos-arm64" => "wave"
     end
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.5.0-rc.3/wave-1.5.0-rc.3-macos-x86_64", :using => :nounzip
-    sha256 "919e8db82aab60ca0ee92b731c41b70039ea37e33052af08e1c87dda4b4fca3b"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.5.0-rc.2/wave-1.5.0-rc.2-macos-x86_64", :using => :nounzip
+    sha256 "ff226b1676ebbd2a4dfa14049ce4da88860d28a0e74f421a61e704cc3b8bb36e"
 
     def install
-      bin.install "wave-1.5.0-rc.3-macos-x86_64" => "wave"
+      bin.install "wave-1.5.0-rc.2-macos-x86_64" => "wave"
     end
   end
 
 
   test do
     output = shell_output("#{bin}/wave --version")
-    assert_match "1.5.0-rc.3", output
+    assert_match "1.5.0-rc.2", output
   end
 end
