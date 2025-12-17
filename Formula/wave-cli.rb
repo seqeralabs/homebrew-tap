@@ -1,47 +1,47 @@
-# Generated with JReleaser 1.21.0 at 2025-12-10T14:53:42.980847556Z
+# Generated with JReleaser 1.21.0 at 2025-12-17T19:23:11.211392064Z
 
 class WaveCli < Formula
   desc "Wave CLI"
   homepage "https://github.com/seqeralabs/wave-cli"
-  version "1.8.0"
+  version "1.8.1"
   license "Apache-2.0"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.0/wave-1.8.0-linux-arm64", :using => :nounzip
-    sha256 "533623f73f8a6e28b8cf8736b64d7be9dfa24a85319ce76e8f1419bf45efdf6b"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.1/wave-1.8.1-linux-arm64", :using => :nounzip
+    sha256 "6aa85a164277aaa1943d65cc9b90d992ce32ba98a37f39ff25867dc251f11352"
 
     def install
-      bin.install "wave-1.8.0-linux-arm64" => "wave"
+      bin.install "wave-1.8.1-linux-arm64" => "wave"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.0/wave-1.8.0-linux-x86_64", :using => :nounzip
-    sha256 "cf27407ed6ecbbee0a4a5eeff6283b7a50683629d39f909907ec9bb3c25fb045"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.1/wave-1.8.1-linux-x86_64", :using => :nounzip
+    sha256 "a31d5929f2b57ed0d92629e5393289c813fe4c418075a05b8c9980ec9750216a"
 
     def install
-      bin.install "wave-1.8.0-linux-x86_64" => "wave"
+      bin.install "wave-1.8.1-linux-x86_64" => "wave"
     end
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.0/wave-1.8.0-macos-arm64", :using => :nounzip
-    sha256 "056e765e8ad33389f5a79b3593c739d062d06d4f875d4ec63e4b82c37637b158"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.1/wave-1.8.1-macos-arm64", :using => :nounzip
+    sha256 "b970cbb98907b4e929e3cc2f1ad971a27b555ed2c295ddc9c68792eb2a9a190d"
 
     def install
-      bin.install "wave-1.8.0-macos-arm64" => "wave"
+      bin.install "wave-1.8.1-macos-arm64" => "wave"
     end
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.0/wave-1.8.0-macos-x86_64", :using => :nounzip
-    sha256 "73694e010a929236ad7b1c30408346753b94c348b68c2047c53a11390bf6f260"
+    url "https://github.com/seqeralabs/wave-cli/releases/download/v1.8.1/wave-1.8.1-macos-x86_64", :using => :nounzip
+    sha256 "11d8e6442b4e3f42e52b0a3b4c10e02f15904339407d909eda6d2d8f1bc41d1e"
 
     def install
-      bin.install "wave-1.8.0-macos-x86_64" => "wave"
+      bin.install "wave-1.8.1-macos-x86_64" => "wave"
     end
   end
 
 
   test do
     output = shell_output("#{bin}/wave --version")
-    assert_match "1.8.0", output
+    assert_match "1.8.1", output
   end
 end
