@@ -1,30 +1,30 @@
-# Generated with JReleaser 1.24.0 at 2026-05-07T09:17:16.254873873Z
+# Generated with JReleaser 1.24.0 at 2026-05-11T13:03:30.760923588Z
 
 class Tw < Formula
   desc "Tower CLI"
   homepage "https://github.com/seqeralabs/tower-cli"
-  version "0.29.1"
+  version "0.30.0"
   license "MPL-2.0"
 
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/tower-cli/releases/download/v0.29.1/tw-linux-x86_64", :using => :nounzip
-    sha256 "0c3060bb2444d4d45aea1f251b9fedbf3a0cdfcdf5989b1e1939c1ba81807453"
+    url "https://github.com/seqeralabs/tower-cli/releases/download/v0.30.0/tw-linux-x86_64", :using => :nounzip
+    sha256 "d42d7f447a15645bc1b59e71942d89e6d623203c28aeb05b643f3de710ba0622"
 
     def install
       bin.install "tw-linux-x86_64" => "tw"
     end
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/seqeralabs/tower-cli/releases/download/v0.29.1/tw-osx-arm64", :using => :nounzip
-    sha256 "2be90c59b50e128ce09ce42418290656f0817a21cfaf6afc7696f22f5224addc"
+    url "https://github.com/seqeralabs/tower-cli/releases/download/v0.30.0/tw-osx-arm64", :using => :nounzip
+    sha256 "aca6e8dbe273ae71e07eacda02ad3e511a0e4baeb53af4e086dfd35e04a2c2f1"
 
     def install
       bin.install "tw-osx-arm64" => "tw"
     end
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/seqeralabs/tower-cli/releases/download/v0.29.1/tw-osx-x86_64", :using => :nounzip
-    sha256 "7e3897a5f8a8c996cd3e22864621310f612fb8cc63a23b31d9cdf028c9d0ff0c"
+    url "https://github.com/seqeralabs/tower-cli/releases/download/v0.30.0/tw-osx-x86_64", :using => :nounzip
+    sha256 "a8cad58777d687df64fdb110620a2e75835913e5b38cb4ef647389b48f77c562"
 
     def install
       bin.install "tw-osx-x86_64" => "tw"
@@ -34,6 +34,6 @@ class Tw < Formula
 
   test do
     output = shell_output("#{bin}/tw --version")
-    assert_match "0.29.1", output
+    assert_match "0.30.0", output
   end
 end
