@@ -1,11 +1,11 @@
-# Generated with JReleaser 1.24.0 at 2026-05-13T08:17:54.734067481Z
+# Generated with JReleaser 1.24.0 at 2026-05-22T08:41:44.513589632Z
 
 class TwJar < Formula
   desc "Tower CLI"
   homepage "https://github.com/seqeralabs/tower-cli"
-  url "https://github.com/seqeralabs/tower-cli/releases/download/v0.31.0/tw-jar.jar", :using => :nounzip
-  version "0.31.0"
-  sha256 "650d92e572230862cb14de09d625307a5541c5d3e94ea41374a9ec04c5f8bd29"
+  url "https://github.com/seqeralabs/tower-cli/releases/download/v0.32.0/tw-jar.jar", :using => :nounzip
+  version "0.32.0"
+  sha256 "666c3535fc7f90a5cb21397f6e9f949e4641b3c2e7be2e7238b2bcf590c33cde"
   license "MPL-2.0"
 
   depends_on "openjdk@11"
@@ -25,6 +25,6 @@ class TwJar < Formula
 
   test do
     output = shell_output("#{bin}/tw-jar --version")
-    assert_match "0.31.0", output
+    assert_match "0.32.0", output
   end
 end
